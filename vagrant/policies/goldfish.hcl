@@ -21,3 +21,12 @@ path "transit/decrypt/goldfish" {
 path "pki/issue/goldfish" {
   capabilities = ["update"]
 }
+
+# vault 1.3.0 compatibility
+path "/auth/token/lookup-self" {
+  capabilities = ["read"]
+}
+
+path "auth/token/renew-self" {
+  capabilities = ["create", "update"]
+}
